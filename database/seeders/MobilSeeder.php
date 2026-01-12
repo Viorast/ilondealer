@@ -120,7 +120,10 @@ class MobilSeeder extends Seeder
         ];
 
         foreach ($mobils as $mobil) {
-            Mobil::create($mobil);
+            Mobil::firstOrCreate(
+                ['nama_mobil' => $mobil['nama_mobil']],
+                $mobil
+            );
         }
     }
 }

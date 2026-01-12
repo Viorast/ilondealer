@@ -12,9 +12,9 @@ class AdminSeeder extends Seeder
      */
     public function run(): void
     {
-        Admin::create([
-            'username' => 'admin',
-            'password' => 'admin123',
-        ]);
+        Admin::firstOrCreate(
+            ['username' => 'admin'],
+            ['password' => 'admin123']
+        );
     }
 }
