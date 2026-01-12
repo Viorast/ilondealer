@@ -1,6 +1,6 @@
 # Nixpacks configuration for Railway
 [phases.setup]
-nixPkgs = ["php82", "php82Extensions.pdo_sqlite", "php82Extensions.sqlite3", "php82Extensions.mbstring", "php82Extensions.tokenizer", "php82Extensions.xml", "php82Extensions.ctype", "php82Extensions.bcmath", "php82Extensions.fileinfo", "php82Extensions.curl", "php82Extensions.dom"]
+nixPkgs = ["php82", "php82Packages.composer", "php82Extensions.pdo_sqlite", "php82Extensions.sqlite3", "php82Extensions.mbstring", "php82Extensions.tokenizer", "php82Extensions.xml", "php82Extensions.ctype", "php82Extensions.bcmath", "php82Extensions.fileinfo", "php82Extensions.curl", "php82Extensions.dom"]
 
 [phases.install]
 cmds = ["composer install --no-dev --optimize-autoloader --no-interaction"]
@@ -8,8 +8,8 @@ cmds = ["composer install --no-dev --optimize-autoloader --no-interaction"]
 [phases.build]
 cmds = [
     "php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-    "php artisan config:clear",
-    "php artisan cache:clear"
+    "php artisan config:clear || true",
+    "php artisan cache:clear || true"
 ]
 
 [start]
