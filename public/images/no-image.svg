@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#f3f4f6"/>
+  <g transform="translate(150, 100)">
+    <path d="M85,65 L15,65 C10,65 5,60 5,55 L5,35 L15,25 L30,25 L35,15 L65,15 L70,25 L85,25 C90,25 95,30 95,35 L95,55 C95,60 90,65 85,65 Z" fill="#9ca3af"/>
+    <circle cx="25" cy="65" r="12" fill="#6b7280"/>
+    <circle cx="75" cy="65" r="12" fill="#6b7280"/>
+    <circle cx="25" cy="65" r="6" fill="#9ca3af"/>
+    <circle cx="75" cy="65" r="6" fill="#9ca3af"/>
+    <rect x="20" y="30" width="25" height="15" rx="2" fill="#d1d5db"/>
+    <rect x="55" y="30" width="25" height="15" rx="2" fill="#d1d5db"/>
+  </g>
+  <text x="200" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" fill="#9ca3af">No Image Available</text>
+</svg>
